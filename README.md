@@ -1,6 +1,7 @@
 local Players = game:GetService("Players")
 local CoreGui = game:GetService("CoreGui")
 local RunService = game:GetService("RunService")
+local TweenService = game:GetService("TweenService")
 
 local ESPEnabled = false
 local ESPTransparency = 0.5
@@ -108,4 +109,48 @@ Players.PlayerAdded:Connect(function(plr)
     end)
 end)
 
-toggleESP()
+-- GUI
+
+local screenGui = Instance.new("ScreenGui")
+screenGui.Parent = game.Players.LocalPlayer.PlayerGui
+screenGui.Name = "BAZUKA_HUB"
+
+local frame = Instance.new("Frame")
+frame.Parent = screenGui
+frame.Size = UDim2.new(0, 250, 0, 150)
+frame.Position = UDim2.new(0, 10, 0, 10)
+frame.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
+frame.BackgroundTransparency = 0.5
+frame.BorderSizePixel = 0
+
+local titleLabel = Instance.new("TextLabel")
+titleLabel.Parent = frame
+titleLabel.Size = UDim2.new(1, 0, 0, 25)
+titleLabel.BackgroundTransparency = 1
+titleLabel.Text = "BAZUKA HUB"
+titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
+titleLabel.TextSize = 20
+titleLabel.Font = Enum.Font.GothamBold
+
+local espButton = Instance.new("TextButton")
+espButton.Parent = frame
+espButton.Size = UDim2.new(0, 230, 0, 30)
+espButton.Position = UDim2.new(0, 10, 0, 50)
+espButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+espButton.Text = "Toggle ESP"
+espButton.TextColor3 = Color3.fromRGB(255, 255, 255)
+espButton.TextSize = 16
+espButton.Font = Enum.Font.Gotham
+
+espButton.MouseButton1Click:Connect(function()
+    toggleESP()
+    if ESPEnabled then
+        espButton.BackgroundColor3 = Color3.fromRGB(255, 0, 0)
+        espButton.Text = "Disable ESP"
+    else
+        espButton.BackgroundColor3 = Color3.fromRGB(0, 255, 0)
+        espButton.Text = "Toggle ESP"
+    end
+end)
+
+screenGui.Enabled = true
