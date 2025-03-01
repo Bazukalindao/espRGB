@@ -128,6 +128,7 @@ titleLabel.Parent = frame
 titleLabel.Size = UDim2.new(1, 0, 0, 25)
 titleLabel.BackgroundTransparency = 1
 titleLabel.Text = "BAZUKA HUB"
+subtitleLabel.Text = "By BAZUKA discord: https://discord.gg/ckggnhbPa2"
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleLabel.TextSize = 20
 titleLabel.Font = Enum.Font.GothamBold
@@ -141,14 +142,6 @@ espButton.Text = "Toggle ESP"
 espButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 espButton.TextSize = 16
 espButton.Font = Enum.Font.Gotham
-
--- Adicionando o ícone do pinguim
-local icon = Instance.new("ImageLabel")
-icon.Parent = frame
-icon.Size = UDim2.new(0, 50, 0, 50)
-icon.Position = UDim2.new(0, 10, 0, 90)
-icon.Image = "https://i.postimg.cc/k4QxrytK/file-4dt-AGRnh-BZJY3t-Af-My-M2-Zf.webp"
-
 espButton.MouseButton1Click:Connect(function()
     toggleESP()
     if ESPEnabled then
