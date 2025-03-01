@@ -142,6 +142,13 @@ espButton.TextColor3 = Color3.fromRGB(255, 255, 255)
 espButton.TextSize = 16
 espButton.Font = Enum.Font.Gotham
 
+-- Adicionando o ícone do pinguim
+local icon = Instance.new("ImageLabel")
+icon.Parent = frame
+icon.Size = UDim2.new(0, 50, 0, 50)
+icon.Position = UDim2.new(0, 10, 0, 90)
+icon.Image = "https://postimg.cc/dk07rr6V"
+
 espButton.MouseButton1Click:Connect(function()
     toggleESP()
     if ESPEnabled then
