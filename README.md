@@ -127,7 +127,7 @@ local titleLabel = Instance.new("TextLabel")
 titleLabel.Parent = frame
 titleLabel.Size = UDim2.new(1, 0, 0, 25)
 titleLabel.BackgroundTransparency = 1
-titleLabel.Text = "BAZUKA HUB discord:https://discord.gg/ckggnhbPa2"
+titleLabel.Text = "BAZUKA HUB"
 titleLabel.TextColor3 = Color3.fromRGB(255, 255, 255)
 titleLabel.TextSize = 20
 titleLabel.Font = Enum.Font.GothamBold
@@ -147,7 +147,7 @@ local icon = Instance.new("ImageLabel")
 icon.Parent = frame
 icon.Size = UDim2.new(0, 50, 0, 50)
 icon.Position = UDim2.new(0, 10, 0, 90)
-icon.Image = "https://www.example.com/pinguim.png"
+icon.Image = "https://photos.app.goo.gl/QNTivLD51q16Lp6D9"
 
 espButton.MouseButton1Click:Connect(function()
     toggleESP()
