@@ -147,7 +147,7 @@ local icon = Instance.new("ImageLabel")
 icon.Parent = frame
 icon.Size = UDim2.new(0, 50, 0, 50)
 icon.Position = UDim2.new(0, 10, 0, 90)
-icon.Image = "https://photos.app.goo.gl/QNTivLD51q16Lp6D9"
+icon.Image = ""
 
 espButton.MouseButton1Click:Connect(function()
     toggleESP()
